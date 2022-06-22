@@ -7,7 +7,7 @@ const productApp=exp.Router();
 const expressAsyncHandler=require('express-async-handler')
 
 //to extract body of request object
-productApp.use(exp.json());
+productApp.use(exp.json()); 
 
 //get all products
 productApp.get('/getproducts',expressAsyncHandler(async (request,response)=>{

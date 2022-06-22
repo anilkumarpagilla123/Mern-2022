@@ -15,6 +15,7 @@ const expressAsyncHandler=require('express-async-handler')
 
 //to extract body of request object
 userApp.use(exp.json());
+  
 
 
 
@@ -62,13 +63,23 @@ else{
     //create token
     let token=jwt.sign({username:userOfDB.username},process.env.SECRET_KEY,{expiresIn:60})
     //send token
-    response.send({message:"login sucess",payload:token,userObj:userOfDB})
+    response.send({message:"login success",payload:token,userObj:userOfDB})
   }
 }
 
 }));
 
 
+
+
+
+//ContactUs feedback form
+userApp.post("/contact-us",expressAsyncHandler(async(request, response) => {
+  let feedbackObject=request.app.get("feedbackObject");
+  let newUserObj=request.body;
+  await feedbackObject.insertOne(newUserObj);
+  response.send({message:"Messsage sent successfully"})
+}));
 
 
 //create a route to 'create-user'

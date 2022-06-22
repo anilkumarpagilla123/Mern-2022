@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.caro-img{
+  height: 350px;
+}
+.cap-text{
+  color:whitesmoke;
+}
+.child:hover{
+  opacity: 0.7;
+  transform:scale(1.05);
+  background: #FFFFFF;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+.loginst{
+  font-weight: lighter;
+  font-family:'Times New Roman';
+}
+.t-style{
+  font-size: 20px;
+  font-family:'Times New Roman', Times, serif;
+}
